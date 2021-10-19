@@ -18,6 +18,8 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
 require_once('close.php');
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -25,12 +27,12 @@ require_once('close.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
-<body>
+<body><span style="text-align: center;">
     <main class="container">
         <div class="row">
             <section class="col-12">
@@ -51,14 +53,14 @@ require_once('close.php');
                         $_SESSION['message'] = "";
                     }
                 ?>
-                <h1>Liste des interventions</h1>
+                <span style=" font-family: 'Roboto';"><h1> Liste des interventions</h1>
                 <table class="table">
                     <thead>
                         <th>ID</th>
                         <th>Type d'intervention</th>
                         <th>Date</th>
                         <th>Etages</th>
-                    </thead>
+                    </thead></span>
                     <tbody>
                         <?php
                         // On boucle sur la variable result
@@ -80,7 +82,7 @@ require_once('close.php');
                 <a href="add.php" class="btn btn-primary">Ajouter une intervention</a>
             </section>
         </div>
-    </main>
+    </main></span>
 </body>
 
 </html>
